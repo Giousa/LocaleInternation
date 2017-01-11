@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">"InternationalizationTest "</string>
+    <string name="text_content">"this is InternationalizationTest"</string>
+</resources>

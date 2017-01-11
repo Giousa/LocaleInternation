@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.giousa.internationalizationtest.MainActivity">
+
+    <Button
+        android:id="@+id/btn_simple_cn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="简单中文"/>
+
+    <Button
+        android:id="@+id/btn_tra_cn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="繁体中文"/>
+
+    <Button
+        android:id="@+id/btn_en"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="英文"/>
+
+    <TextView
+        android:text="@string/text_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>
