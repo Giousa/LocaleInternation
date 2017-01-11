@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
             case R.id.btn_simple_cn:
                 Intent intent1 = new Intent(MainActivity.this,SetActivity.class);
                 startActivity(intent1);
-//                finish();
+                finish();
                 break;
 
         }

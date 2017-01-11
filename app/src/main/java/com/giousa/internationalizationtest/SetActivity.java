@@ -44,26 +44,39 @@ public class SetActivity extends AppCompatActivity {
                 switchLanguage(Locale.SIMPLIFIED_CHINESE);
                 sendBroadcast(intent);
                 finish();
+//                enterHome();
                 break;
             case R.id.btn_tra_cn:
                 switchLanguage(Locale.TRADITIONAL_CHINESE);
                 sendBroadcast(intent);
                 finish();
+//                enterHome();
                 break;
             case R.id.btn_en:
                 switchLanguage(Locale.ENGLISH);
                 sendBroadcast(intent);
                 finish();
+//                enterHome();
                 break;
         }
     }
 
+    private void enterHome() {
+        Intent intent = new Intent(this, MainActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
+        // 杀掉进程
+        android.os.Process.killProcess(android.os.Process.myPid());
+        System.exit(0);
+    }
+
     public void switchLanguage(Locale locale) {
-        Resources resources = getResources();// 获得res资源对象
-        Configuration config = resources.getConfiguration();// 获得设置对象
-        DisplayMetrics dm = resources.getDisplayMetrics();// 获得屏幕参数：主要是分辨率，像素等。
-        config.locale = locale; // 简体中文
+        Resources resources = getResources();
+        Configuration config = resources.getConfiguration();
+        DisplayMetrics dm = resources.getDisplayMetrics();
+        config.locale = locale;
         resources.updateConfiguration(config, dm);
     }
+
 
 }

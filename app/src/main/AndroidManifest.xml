@@ -10,7 +10,8 @@
         android:theme="@style/AppTheme">
         <activity
             android:configChanges="locale"
-            android:name=".MainActivity">
+            android:name=".MainActivity"
+            android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -20,7 +21,8 @@
 
         <activity
             android:configChanges="locale"
-            android:name=".SetActivity"/>
+            android:name=".SetActivity"
+            android:launchMode="singleTask"/>
 
         <receiver android:name=".SwitchReceiver">
             <intent-filter>
