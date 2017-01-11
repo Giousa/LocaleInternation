@@ -18,6 +18,10 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:configChanges="locale"
+            android:name=".SetActivity"/>
+
         <receiver android:name=".SwitchReceiver">
             <intent-filter>
                 <action android:name="com.giousa.internationalizationtest.language"/>
